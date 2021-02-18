@@ -86,10 +86,13 @@ Then, run kafka-producer
 kafka-producer.py
 
 ```python
-from kafka import KafkaConsumer
-consumer = KafkaConsumer('sample', auto_offset_reset='earliest', group_id=None)
-for message in consumer:
-    print (message)
+from kafka import KafkaProducer
+producer = KafkaProducer(bootstrap_servers='localhost:9092')
+producer.send('sample', b'Hello, World!')
+producer.send('sample', key=b'message-two', value=b'This is Kafka-Python')
+print('sended')
+producer.flush()
+producer.close()
 ```
 
 kafka-producer sends message to the kafka-consumer. Consumer receives the message and it will show it.

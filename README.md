@@ -13,7 +13,7 @@ Kafka works on the publish-subscribe pattern. It allows some of the applications
 
 Each of these brokers has partitions which are leaders and those that are replicas. This allows for an incredible level of fault tolerance through your system. When the system is functioning normally, all reads and writes to a topic go through the leader and the leader makes sure that all the other brokers are updated.
 
-**Installation - Windows ( You need to run as administrator the shell.)**
+**Installation - Windows ( You need to run shell as administrator.)**
 
 - Step 1) Install Java SDK
 

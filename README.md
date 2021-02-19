@@ -96,3 +96,18 @@ producer.close()
 ```
 
 kafka-producer sends message to the kafka-consumer. Consumer receives the message and it will show it.
+
+
+**Kafka-CLI Producer and Consumer**
+
+```
+.\kafka-console-producer.bat --broker-list localhost:9092 --topic test_topic
+```
+Keep running, then
+
+```
+.\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test_topic --from-beginning
+```
+
+Send some messages from the producer terminal then you will see it on the consumer's terminal.
+
